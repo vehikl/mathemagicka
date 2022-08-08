@@ -1,4 +1,4 @@
-#MATHEMAGICKA
+# MATHEMAGICKA
 a general purpose computational knowledge engine
 
 ## Run Demo
