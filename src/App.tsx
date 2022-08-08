@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
+import '.'
+import MagickInput from "./Components/MagickInput";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <span>mathemagicka</span>
-      </header>
-    </div>
-  );
+
+    return (
+        <div className="App">
+            <span>mathemagicka</span>
+
+            <MagickInput />
+        </div>
+    );
 }
 
 export default App;
