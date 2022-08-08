@@ -12,6 +12,12 @@ describe('Calculator', () => {
         expect(Calculator.evaluate(expression)).toEqual(result);
     });
 
+    test.each([
+        ['asdf', 'Undefined symbol asdf']
+    ])('throws error for (%s) and gets (%s)', (expression, message) => {
+        expect(() => Calculator.evaluate(expression)).toThrow(message);
+    });
+
     it('Evaluates functions with specified levels of precision', () => {
         expect(Calculator.evaluate('cos(45 deg)', 1)).toEqual('0.7');
     })
