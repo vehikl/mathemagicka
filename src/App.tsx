@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MagickInput from "./Components/MagickInput";
+import Inputtor from "./Components/Inputtor";
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
         <div className="App">
             <span>mathemagicka</span>
 
-            <MagickInput />
+            <Inputtor />
         </div>
     );
 }

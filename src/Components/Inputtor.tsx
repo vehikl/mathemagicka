@@ -1,8 +1,8 @@
 import React, {FormEvent, useState} from "react";
-import Calculator from "../Calculator";
+import Calculator from "../Magick/Calculator";
 
 
-function MagickInput() {
+function Inputtor() {
     const [answer, setAnswer] = useState()
 
     const [question, setQuestion] = useState('');
@@ -33,4 +33,4 @@ function MagickInput() {
 
 
 
-export default MagickInput;
+export default Inputtor;

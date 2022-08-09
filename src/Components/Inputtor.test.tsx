@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import MagickInput from './MagickInput';
+import Inputtor from './Inputtor';
 
 test('renders placeholder text', () => {
-    render(<MagickInput />);
+    render(<Inputtor />);
     const inputElement = screen.getByPlaceholderText(/Enter Expression.../i);
     expect(inputElement).toBeInTheDocument();
 });
