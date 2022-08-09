@@ -1,7 +1,5 @@
-import React, {FormEvent} from "react";
-import {useState} from 'react';
+import React, {FormEvent, useState} from "react";
 import Calculator from "../Calculator";
-
 
 
 function MagickInput() {
@@ -9,22 +7,28 @@ function MagickInput() {
 
     const [question, setQuestion] = useState('');
 
-    const handleChange = (event: FormEvent<HTMLInputElement>)   => {
+    function handleChange(event: FormEvent<HTMLInputElement>) {
         setQuestion(event.currentTarget.value);
 
         console.log('value is:', event.currentTarget.value);
-    };
+    }
 
-    const Execute = (value: string) => {
+    function Execute(value: string) {
         setAnswer(Calculator.evaluate(value));
     }
 
+    function handleSubmit(event: FormEvent<HTMLFormElement>) {
+        setAnswer(Calculator.evaluate(question));
+        event.preventDefault();
+    }
+
+
     return (
-        <div>
+        <form onSubmit={handleSubmit}>
             <input onChange={handleChange} type={"text"} placeholder={"Enter Expression..."}/>
             <input type={"button"} onClick={() => Execute(question)}/>
             <p>{answer}</p>
-        </div>
+        </form>
     );
 }
 
