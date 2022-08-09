@@ -1,4 +1,4 @@
-import React from "react";
+import React, {FormEvent} from "react";
 import {useState} from 'react';
 import Calculator from "../Calculator";
 
@@ -9,10 +9,10 @@ function MagickInput() {
 
     const [question, setQuestion] = useState('');
 
-    const handleChange = (event: { target: { value: React.SetStateAction<string>; }; })   => {
-        setQuestion(event.target.value);
+    const handleChange = (event: FormEvent<HTMLInputElement>)   => {
+        setQuestion(event.currentTarget.value);
 
-        console.log('value is:', event.target.value);
+        console.log('value is:', event.currentTarget.value);
     };
 
     const Execute = (value: string) => {

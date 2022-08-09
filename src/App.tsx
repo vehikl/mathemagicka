@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import '.'
 import MagickInput from "./Components/MagickInput";
 
 function App() {

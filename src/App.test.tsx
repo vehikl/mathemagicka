@@ -1,9 +1,18 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {getByText, render, screen} from '@testing-library/react';
 import App from './App';
+import userEvent from "@testing-library/user-event";
 
-test('renders mathemagicka title', () => {
+test('can solve simple equations', () => {
   render(<App />);
-  const linkElement = screen.getByText(/mathemagicka/i);
-  expect(linkElement).toBeInTheDocument();
+  const equationInput = screen.getByRole('textbox');
+  equationInput.focus();
+
+  const buttonInput = screen.getByRole('button');
+  //type simple eqn
+  userEvent.keyboard('2+2');
+  //click submit button
+  userEvent.click(buttonInput);
+
+  expect(screen.getByText("4")).toBeInTheDocument();
 });
