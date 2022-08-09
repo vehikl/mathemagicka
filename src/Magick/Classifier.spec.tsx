@@ -4,7 +4,7 @@ describe('Classifier', () => {
     test.each([
         ['7*2', 'math'],
         ['Sulfur', 'chemistry'],
-        ['volume of 4grams of radium', 'chemistry'],
+        ['radium', 'chemistry'],
         ['cos(3pi)', 'math'],
     ])('can evaluate (%s)', (expression, result) => {
         expect(Classifier.evaluate(expression)).toEqual(result);

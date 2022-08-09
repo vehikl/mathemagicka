@@ -17,7 +17,7 @@ classifier.addDocument('Hydrofluoric Acid', 'chemistry');
 classifier.addDocument('Boron', 'chemistry');
 classifier.addDocument('Molecular Weight of Oxygen', 'chemistry');
 classifier.addDocument('density of Al', 'chemistry');
-classifier.addDocument('sulfur', 'chemistry');
+classifier.addDocument('Nitrogen', 'chemistry');
 
 classifier.train();
 
