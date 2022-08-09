@@ -11,8 +11,8 @@ function MagickInput() {
         setQuestion(event.currentTarget.value);
     }
 
-    function Execute(value: string) {
-        setAnswer(Calculator.evaluate(value));
+    function answerQuestion() {
+        setAnswer(Calculator.evaluate(question));
     }
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -24,7 +24,7 @@ function MagickInput() {
     return (
         <form onSubmit={handleSubmit}>
             <input onChange={handleChange} type={"text"} placeholder={"Enter Expression..."}/>
-            <button onClick={() => Execute(question)}>Answer</button>
+            <button onClick={answerQuestion}>Answer</button>
             <p>{answer}</p>
         </form>
     );
