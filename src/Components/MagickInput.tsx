@@ -9,8 +9,6 @@ function MagickInput() {
 
     function handleChange(event: FormEvent<HTMLInputElement>) {
         setQuestion(event.currentTarget.value);
-
-        console.log('value is:', event.currentTarget.value);
     }
 
     function Execute(value: string) {
