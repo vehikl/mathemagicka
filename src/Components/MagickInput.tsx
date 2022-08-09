@@ -24,7 +24,7 @@ function MagickInput() {
     return (
         <form onSubmit={handleSubmit}>
             <input onChange={handleChange} type={"text"} placeholder={"Enter Expression..."}/>
-            <input type={"button"} onClick={() => Execute(question)}/>
+            <button onClick={() => Execute(question)}>Answer</button>
             <p>{answer}</p>
         </form>
     );
