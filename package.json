@@ -5,10 +5,6 @@
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
-    "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
-    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
-    "test:unit": "cypress open --component",
-    "test:unit:ci": "cypress run --component --quiet --reporter spec",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint mathemagicka --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
@@ -24,7 +20,6 @@
     "@vitejs/plugin-vue-jsx": "^2.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/tsconfig": "^0.1.3",
-    "cypress": "^10.3.0",
     "eslint": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-vue": "^9.0.0",
