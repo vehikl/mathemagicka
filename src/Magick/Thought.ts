@@ -1,3 +1,3 @@
 export type Thought = {
-    content: string[]
+    content: {}
 }

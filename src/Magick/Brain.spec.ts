@@ -7,7 +7,7 @@ describe('Brain', () => {
 
     it('taco brains', () => {
         const tmp : Thought = {
-            content: ['taco1', 'taco2']
+            content: [3]
         };
 
         expect(Brain.evaluate(tmp)).toBeTruthy();
