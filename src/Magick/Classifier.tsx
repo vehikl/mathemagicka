@@ -1,8 +1,5 @@
 import natural from "natural";
 
-// A janky ass classifier
-
-
 const classifier = new natural.LogisticRegressionClassifier();
 
 classifier.addDocument('2 + 2', 'math');
