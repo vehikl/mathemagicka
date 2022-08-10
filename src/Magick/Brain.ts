@@ -5,7 +5,15 @@ import {Thought} from "./Thought";
 
 export default class Brain {
     static evaluate(input: Thought) {
+        let output = {}
         console.log(input);
-        return input;
+
+        //take input
+
+        //set of tools to apply to Thought & Question
+
+        //set each in output
+
+        return output;
     }
 }
