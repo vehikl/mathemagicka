@@ -1,14 +1,15 @@
-import {Thought} from "./Thought";
-
-//brain takes thought and produces idea
-
+import Calculator from "./Calculator";
 
 export default class Brain {
-    static evaluate(input: Thought) {
-        let output = {}
-        console.log(input);
+    static evaluate(input: string | string[]) {
+        let output: string | string[] = '';
 
-        //take input
+        if (typeof(input) == 'string') {
+            console.log('single string check')
+            output = Calculator.evaluate(input)
+            console.log(output)
+
+        }
 
         //set of tools to apply to Thought & Question
 

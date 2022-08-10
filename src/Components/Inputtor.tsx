@@ -1,9 +1,9 @@
 import React, {FormEvent, useState} from "react";
-import Calculator from "../Magick/Calculator";
+import Brain from "../Magick/Brain";
 
 
 function Inputtor() {
-    const [answer, setAnswer] = useState()
+    const [answer, setAnswer] = useState('')
 
     const [question, setQuestion] = useState('');
 
@@ -12,11 +12,11 @@ function Inputtor() {
     }
 
     function answerQuestion() {
-        setAnswer(Calculator.evaluate(question));
+        setAnswer(Brain.evaluate(question).toString());
     }
 
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
-        setAnswer(Calculator.evaluate(question));
+        setAnswer(Brain.evaluate(question).toString());
         event.preventDefault();
     }
 
