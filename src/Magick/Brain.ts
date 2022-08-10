@@ -1,20 +1,18 @@
 import Calculator from "./Calculator";
 
 export default class Brain {
-    static evaluate(input: string | string[]) {
-        let output: string | string[] = '';
+    static evaluate(input: string) {
+        let output = {};
 
-        if (typeof(input) == 'string') {
-            console.log('single string check')
+        try {
             output = Calculator.evaluate(input)
-            console.log(output)
-
+        }
+        catch (e) {
+            output = 'ERROR ERROR';
+        }
+        finally{
+            return output;
         }
 
-        //set of tools to apply to Thought & Question
-
-        //set each in output
-
-        return output;
     }
 }
