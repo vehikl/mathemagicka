@@ -2,7 +2,7 @@ import Tokenizer from "./Tokenizer";
 
 describe('Tokenizer', () => {
 
-    it('prints maybe does stuff to console', () => {
-        expect(Tokenizer.evaluate('what is this')).toBeTruthy();
+    it('evaluates a basic token', () => {
+        expect(Tokenizer.evaluate('what is this')).toEqual(['what', 'is', 'this']);
     })
 });
