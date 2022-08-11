@@ -10,9 +10,6 @@ export default class Brain {
         catch (e) {
             output = 'ERROR ERROR';
         }
-        finally{
-            return output;
-        }
-
+        return output.toString();
     }
 }
